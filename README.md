@@ -3,7 +3,7 @@ This is a demo page to fetch and display data from the [Oxford Dictionaries API]
 
 # Setup Development Environment 
 - [Install NodeJS](https://nodejs.org/en/download/) on your computer.
-- Clone this repo onto your machine
+- Clone this repo onto your machine. Either download the ZIP or use GIT. [How to Install Git](https://github.com/git-guides/install-git)
 - Get a [free API Key and App ID via Oxford Dictionaries](https://developer.oxforddictionaries.com/)
 - Locally: create a `.env` file in the project root including your Oxford API credentials (see the `.env.example` as a starting point)
 - Open a terminal (e.g. in VSCode) to the project folder and run:
