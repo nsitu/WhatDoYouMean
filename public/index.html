@@ -96,9 +96,9 @@
   
   <p>Note: The Oxford API has not enabled <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross Origin Resource Sharing</a> (CORS). Therefore the browser will refuse to display data directly from the API. This is a feature, not a bug! Unless instructed otherwise by CORS headers, The browser will enforce a <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same Origin Policy</a> to prevent cross-contamination of data between different domains.</p>
 
-  <p>Our solution uses <a href="https://nodejs.org/">NodeJS</a> on the server, to request data from Oxford on behalf of our frontend. NodeJS listens on its own `search` endpoint. It passes requests on to the Oxford API, and relays the result back.</p>
+  <p>Our solution uses <a href="https://nodejs.org/">NodeJS</a> and <a href="https://expressjs.com/">Express</a> on the server, to request data from Oxford on behalf of our frontend. NodeJS listens on its own `search` endpoint. It passes requests on to the Oxford API, and relays the result back.</p>
 
-  <p> A further use of NodeJS here is to handle authentication in a discrete way. The Oxford API requires an API Key, but we want to avoid revealing it to end users. It's better to store our credentials on the server (e.g. as environment variables). NodeJS does this really well, and saves us having to give away reveal our secrets.</p>
+  <p>A further use of NodeJS here is to handle authentication in a discrete way. The Oxford API requires an API Key, but we want to avoid revealing it to end users. It's better to store our credentials on the server (e.g. as environment variables). NodeJS does this really well, and saves us having to give away reveal our secrets.</p>
   
   <p>Created by <a href="https://nsitu.ca">Harold Sikkema</a> in the context of Integrated Systems Design 2 in the <a href="https://ixd.sheridancollege.ca/program.html">Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College.</a> Made with <a href="https://v3.vuejs.org/">Vue 3</a>.  Data fetched with <a href="https://axios-http.com/">Axios HTTP Client</a>.  Fonts via <a href="https://enterprise.monotype.com/">Monotype</a>. Thanks to  <a href="https://developer.oxforddictionaries.com/">Oxford Dictionaries</a> for all the words. 
   </p> 
