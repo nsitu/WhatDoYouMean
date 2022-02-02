@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- This is the frontend. It is served up by NodeJS Express, along with other static frontend assets in the public folder. -->
+
   <meta charset="utf-8">
   <title>What Do You Mean?</title> 
 
@@ -12,7 +15,7 @@
   <!-- Axios for making HTTP requests.  -->
   <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
 
-  <!--  CooperBTLight, BetterTimesRegular via Monotype --> 
+  <!--  Typography: CooperBTLight, BetterTimesRegular via Monotype --> 
   <link href="https://cdn.fonts.net/kit/1b6a6d30-8398-11ec-9ce3-0220834439f4/1b6a6d30-8398-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
 
   <!-- Material Design Lite  via: https://getmdl.io/ -->
@@ -36,9 +39,11 @@
       
       <h1>WHAT DO YOU MEAN?</h1> 
       
+      <!-- Prevent the form from submitting the default way. Instead, let vuejs handle it. -->
       <form @submit.prevent="search"> 
             
-      <!-- Expandable Textfield --> 
+      <!-- Expandable Textfield via Material Design Lite 
+      see also: https://getmdl.io/components/index.html#textfields-section --> 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
         <label class="mdl-button mdl-js-button mdl-button--icon" for="word">
           <i class="material-icons">search</i>
@@ -51,6 +56,7 @@
       </form>
     </header> 
 
+    <!-- VueJS will only show this while fetching data -->
     <section v-if="loading" id="loader">
           <!-- https://loading.io/  -->
           <img src="loader.svg"> 
@@ -59,6 +65,8 @@
     <section id="notice" v-if="notice">
       <p>{{ notice }}</p>
     </section>
+
+    <!-- There's a lot of nested loops (v-for directives) in the section below. This is by intentional! It reflects the structure of the source data. Compare this markup with the structure JSON results from Oxford API. If you're using a different API you will need different markup to suit the provided structure.   -->
 
     <section v-if="results" id="results"> 
       <article class="result" v-for="result in results">
@@ -100,7 +108,7 @@
 
   <p>A further use of NodeJS here is to handle authentication in a discrete way. The Oxford API requires an API Key, but we want to avoid revealing it to end users. It's better to store our credentials on the server (e.g. as environment variables). NodeJS does this really well, and saves us having to give away reveal our secrets.</p>
   
-  <p>Created by <a href="https://nsitu.ca">Harold Sikkema</a> in the context of Integrated Systems Design 2 in the <a href="https://ixd.sheridancollege.ca/program.html">Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College.</a> Made with <a href="https://v3.vuejs.org/">Vue 3</a>.  Data fetched with <a href="https://axios-http.com/">Axios HTTP Client</a>.  Fonts via <a href="https://enterprise.monotype.com/">Monotype</a>. Thanks to  <a href="https://developer.oxforddictionaries.com/">Oxford Dictionaries</a> for all the words. 
+  <p>Created by <a href="https://nsitu.ca">Harold Sikkema</a> in the context of Integrated Systems Design 2 in the <a href="https://ixd.sheridancollege.ca/program.html">Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College.</a> Made with <a href="https://v3.vuejs.org/">Vue 3</a>.  Data fetched with <a href="https://axios-http.com/">Axios HTTP Client</a>.  Fonts via <a href="https://enterprise.monotype.com/">Monotype</a>. Thanks to  <a href="https://developer.oxforddictionaries.com/">Oxford Dictionaries</a> for all the words. Btw Justin, <a href="https://www.youtube.com/watch?v=DK_0jXPuIr0">what do you mean</a>?
   </p> 
  
 </div> 
