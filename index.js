@@ -3,6 +3,8 @@ const express = require ('express');  // web app framework
 const axios = require('axios');  // library for making requests
 const cors = require('cors');         // Cross Origin Resource Sharing
 
+const PORT = process.env.PORT || 5000
+
 const app	= express();      // enable express
 app.use( cors() );          // make express attach CORS headers to responses
 app.use( express.json() );  // add json capabilities to our express app
@@ -31,6 +33,6 @@ app.get('/search/:word', (req, res) => {
 });
 
 //Go live
-app.listen(0, () => {
+app.listen(PORT, () => {
   console.log("We are live " );
 });
