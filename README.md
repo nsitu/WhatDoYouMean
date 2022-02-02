@@ -1,10 +1,25 @@
 # What Do You Mean
 This is a demo page to fetch and display data from the [Oxford Dictionaries API](https://developer.oxforddictionaries.com/) via a NodeJS backend.
 
-# Installation
-- Make a folder for your project and navigate to it in your terminal. Then run:
+# Setup Development Environment 
+- [Install NodeJS](https://nodejs.org/en/download/) on your computer.
+- Clone this repo onto your machine
+- Get a [free API Key and App ID via Oxford Dictionaries](https://developer.oxforddictionaries.com/)
+- Locally: create a `.env` file in the project root including your Oxford API credentials (see the `.env.example` as a starting point)
+- Open a terminal (e.g. in VSCode) to the project folder and run:
 - `npm install`
+- This will install all dependencies based on the `package.json` file.
+- To start the app run the command: 
 - `npm start`
+- Look for the message "We are live on port 5000"
+- Point your browser to [http://localhost:5000/](http://localhost:5000/)
+
+# Deploying to Heroku
+- You can deploy NodeJS apps fairly easily to Heorku via this Guide: [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- Just remember to set your Oxford API credentials as [Environment Variables in the Heroku Dashboard.](https://devcenter.heroku.com/articles/config-vars#using-the-heroku-dashboard)
+
+# Deploy on Replit
+- There's a Replit-compatible version of this app [already deployed on Replit](https://replit.com/@haroldsikkema/What-Do-You-Mean). You can fork it if you like. 
 
 # About
 
