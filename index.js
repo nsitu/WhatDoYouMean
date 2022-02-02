@@ -24,6 +24,7 @@ app.get('/search/:word', (req, res) => {
       app_id: process.env.OXFORD_ID
     }
   }; 
+  console.log(options);
   axios.request(options).then((response) => { 
     res.send(  response.data ) 
   }).catch( (error) => {
