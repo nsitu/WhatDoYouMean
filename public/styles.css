@@ -9,7 +9,7 @@ p, h2,h3,h6,input, #word {
 } 
 
 h1{
-  font-size: 4em;
+  font-size: 5em;
   margin: 0;
 }
 
@@ -20,7 +20,7 @@ h1{
 header{
   background: yellow;
   overflow: hidden;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 
@@ -32,7 +32,8 @@ header{
 
 form{
   font-size: 4rem;
-  transform: scale(2)
+  transform: scale(2);
+  padding: 1rem;
 }
 
 #notice{
