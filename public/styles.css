@@ -1,0 +1,90 @@
+body{
+  text-align: center;
+}
+h1, .lexicalCategory{
+  font-family: 'BetterTimesRegular'; 
+}
+p, h2,h3,h6,input, #word { 
+  font-family: 'CooperBTLight' ; 
+} 
+
+h1{
+  font-size: 4em;
+  margin: 0;
+}
+
+.lexicalCategory{
+  background: yellow;
+}
+
+header{
+  background: yellow;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+
+.phoneticSpelling{
+  color: #999;
+  font-size: 3rem;
+  line-height: 5rem;
+}
+
+form{
+  font-size: 4rem;
+  transform: scale(2)
+}
+
+#notice{
+  padding: 2rem;
+}
+#notice p {
+  font-size: 2rem;
+}
+
+.lexicalEntry{
+  max-width: 800px;
+  border: 10px solid #efefef;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 50px;
+}
+ 
+
+
+
+.sense{ 
+  width: 60%;
+  margin: 1rem auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.sense:last-child{ 
+  border-bottom: none;
+}
+.sense p{
+  font-size: 1.5rem;
+}
+
+
+footer{
+ background: #333;
+ padding: 2rem;
+}
+footer p{
+  max-width: 800px;
+  color: #ccc;
+  margin: 1rem auto;
+}
+footer img{
+  width: 250px;
+}
+
+::selection {
+  color: white;
+  background: rgb(255,64,129) /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: white;
+  background: rgb(255,64,129); /* Gecko Browsers */
+}
